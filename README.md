@@ -7,5 +7,7 @@ which is help us to manage the complex states
 
 simple structure of redux
 
-![Alt text](../../../../../../../C:/Users/Salih/OneDrive/Masa%C3%BCst%C3%BC/1_El8r-SCocpERcvs31huVTA.webp)
+install library 
 
+code:
+  yarn add redux react-redux
