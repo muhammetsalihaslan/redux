@@ -7,7 +7,8 @@ which is help us to manage the complex states
 
 simple structure of redux
 
-install library 
+install library redux toolkit and react-redux
 
 code:
-  yarn add redux react-redux
+  
+$ yarn add @reduxjs/toolkit react-redux
