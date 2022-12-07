@@ -21,3 +21,19 @@ createSlice :: A function that accepts an initial state, an object of reducer fu
 createStore :: A friendly abstraction over the standard Redux createStore function
 
 useSelector/useDispatch::useSelector and useDispatch are a set of hooks to use as alternatives to the existing connect() higher-order component. The equivalent of map state to props is useSelector. It takes in a function argument that returns the part of the state that you want. The equivalent of map dispatch to props is useDispatch. We can invoke useDispatch and store it to a variable, dispatch. Dispatch will work with the allActions imported from the actions folder.
+
+
+we have to export both our actions and reducers :: counterSlice actions: increment decrement reducers: counterSlice.reducer;
+
+in this tutorial so redux store.js is main thing we have to import our action part
+
+        *********STRUCTURE**********
+
+
+Redux part:: main component is store inside of app folder we have to import our redux in here and write our calling function inside of reducers
+other component:: counterSlice is our action of what we want with redux 
+Counter.js:: ui part we use useselector and usedispatch for using redux useSelector for select our redux action usedispatch for use our redux action 
+
+all of them have to in index.js part we create them with provide and store 
+
+and app.js part we add counter in it 
