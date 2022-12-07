@@ -37,3 +37,7 @@ Counter.js:: ui part we use useselector and usedispatch for using redux useSelec
 all of them have to in index.js part we create them with provide and store 
 
 and app.js part we add counter in it 
+
+(a && b) does not even evaluate b if a is falsy and returns a straight away; but if a is truthy, the it evaluates and returns b
+
+(a || b) does not even evaluate b if a is truthy and returns a, but if it's falsy, then it evaluates and returns b
