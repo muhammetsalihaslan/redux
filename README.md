@@ -43,3 +43,6 @@ and app.js part we add counter in it
 (a || b) does not even evaluate b if a is truthy and returns a, but if it's falsy, then it evaluates and returns b
 
 payload:: as far as i understant payload is aomunt of action to pass other side 
+
+
+substring() => The substring() method extracts characters, between two indices (positions), from a string, and returns the substring.
