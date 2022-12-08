@@ -46,3 +46,6 @@ payload:: as far as i understant payload is aomunt of action to pass other side
 
 
 substring() => The substring() method extracts characters, between two indices (positions), from a string, and returns the substring.
+
+
+nanoid:: generate random id 
