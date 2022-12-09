@@ -49,3 +49,24 @@ substring() => The substring() method extracts characters, between two indices (
 
 
 nanoid:: generate random id 
+
+
+        ***************Redux-example2***************
+
+First of all we create store.js with configureStore() function 
+
+//!what is configureStore():It is the structure that allows the definition of reducers. In general, it is defined in index.js or store.js in a folder named store.
+
+secondly we create features folders for 
+
+features : It is the folder where the slice components are located. (createSlice) is defined and for each Slice file (slice.reducer, slice.actions) it is defined when export operations are made.
+
+then create Slice component for reducer and actions with createSlice function
+ 
+
+createSlice :: Allows the creation of slice components. In createSlice; We need to define name, initialState and reducers. 
+name : The name of the reducer. 
+initialState : initial State i. 
+reducers : functions to run.
+
+whan we import slice component to the store.js we have to use with xxxReducer and import its how to use this; (forexample:: postsReducers)
