@@ -70,3 +70,10 @@ initialState : initial State i.
 reducers : functions to run.
 
 whan we import slice component to the store.js we have to use with xxxReducer and import its how to use this; (forexample:: postsReducers)
+
+and we create postList.js for what postSlice can do its a some kind of create action for postReducers and we import postList into our app.js part for show
+
+
+useSelector :: useSelector(state => state.reducer); Information about reducer in state can be accessed. useSelector will detect this change immediately as a result of changing states.
+
+payload :: form data that we send or we actually dispatch
