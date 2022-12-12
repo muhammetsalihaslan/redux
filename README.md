@@ -77,3 +77,12 @@ and we create postList.js for what postSlice can do its a some kind of create ac
 useSelector :: useSelector(state => state.reducer); Information about reducer in state can be accessed. useSelector will detect this change immediately as a result of changing states.
 
 payload :: form data that we send or we actually dispatch
+
+
+        **********AddPost.js*************
+
+For take an title and content save post author 
+
+for take information use useSelector 
+
+dispatch is for action of state we have action with dispath in our state part
