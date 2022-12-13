@@ -109,3 +109,16 @@ we all use date-fns function
 First:: we create TimeAgo component 
 then get new part in postSlice 
 then create ui code in renderedPost inside of postlist 
+
+
+&nbsp ::Alternatively called a fixed space or hard space, NBSP (non-breaking space) is used in programming and word processing to create a space in a line that cannot be broken by word wrap. With HTML, &nbsp; lets you create multiple spaces that are visible on a web page and not only in the source code.
+
+
+ // const orderedPosts = posts
+    .slice()
+    .sort((a, b) => b.date.localeCompare(a.date)); // take last entiries in top of our page 
+
+
+
+
+
