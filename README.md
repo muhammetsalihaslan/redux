@@ -101,3 +101,11 @@ const onSavePostClicked = () => {
 
 
 postAuthor.js :: with this we can add author to the ui 
+
+HOW TO CREATE DATE PART 
+
+we all use date-fns function 
+
+First:: we create TimeAgo component 
+then get new part in postSlice 
+then create ui code in renderedPost inside of postlist 
