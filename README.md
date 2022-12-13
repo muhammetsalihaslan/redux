@@ -86,3 +86,18 @@ For take an title and content save post author
 for take information use useSelector 
 
 dispatch is for action of state we have action with dispath in our state part
+
+const onSavePostClicked = () => {
+    if (title && content) {
+      dispatch(postAdded(title, content, userId));
+      setTitle("");
+      setContent("");
+    }
+  };  its the main part of project we can run  postadded  via and we have to useState part to final output 
+
+
+  disabled={!canSave}>  :: if can save not right make button disable in this code//
+
+
+
+postAuthor.js :: with this we can add author to the ui 
