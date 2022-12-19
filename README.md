@@ -119,6 +119,8 @@ then create ui code in renderedPost inside of postlist
     .sort((a, b) => b.date.localeCompare(a.date)); // take last entiries in top of our page 
 
 
+     **********USİNG AXİOS*************
+
 
 
 
