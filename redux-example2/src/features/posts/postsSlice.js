@@ -42,7 +42,7 @@ const initialState = {
 
 export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
   const response = await axios.get(POSTS_URL);
-  return response.data;  // getting data from url 
+  return response.data; // getting data from url
 });
 
 export const addNewPosts = createAsyncThunk(
@@ -88,7 +88,27 @@ const postsSlice = createSlice({
       }
     },
   },
-  extraReducers(builder)
+  extraReducers(builder) {
+    builder
+      .addCase(fetchPosts.pending, (state, action) => {
+        state.status = "loading";
+      })
+      .addCase(fetchPosts.fulfilled, (state, action) => {
+        state.status = "succeeded";
+        let min = 1;
+        const loadedPosts = action.payload.map((post) => {
+          post.date = sub(new Date(), { minutes: min++ }).toISOString();
+          post.reactions = {
+            thumbsUp: 0,
+            wow: 0,
+            heart: 0,
+            rocket: 0,
+            coffee: 0,
+          };
+          return post;
+        });
+      });
+  },
 });
 
 export const selectAllPosts = (state) => state.posts.posts;
