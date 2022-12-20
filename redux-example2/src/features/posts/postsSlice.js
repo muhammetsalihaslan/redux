@@ -32,7 +32,7 @@ import axios from "axios";
 //   },
 // ];
 
-const POST_URL = "https://jsonplaceholder.typicode.com/posts";
+const POSTS_URL = "https://jsonplaceholder.typicode.com/posts";
 
 const initialState = {
   posts: [],
@@ -40,7 +40,18 @@ const initialState = {
   errors: null,
 };
 
-export const fetchPosts = createAsyncThunk("posts/fetchPosts");
+export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
+  const response = await axios.get(POSTS_URL);
+  return response.data;  // getting data from url 
+});
+
+export const addNewPosts = createAsyncThunk(
+  "posts/addNewPosts",
+  async (intialPost) => {
+    const response = await axios.post(POSTS_URL, intialPost);
+    return response.data;
+  }
+);
 
 const postsSlice = createSlice({
   name: "posts",
@@ -77,6 +88,7 @@ const postsSlice = createSlice({
       }
     },
   },
+  extraReducers(builder)
 });
 
 export const selectAllPosts = (state) => state.posts.posts;
