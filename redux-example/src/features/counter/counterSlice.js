@@ -19,7 +19,7 @@ export const counterSlice = createSlice({
     },
     incrementByAmount: (state, action) => {
       state.count += action.payload;
-    },
+    }, //both state and new data form
   },
 });
 
