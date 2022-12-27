@@ -3,41 +3,12 @@ import { nanoid } from "@reduxjs/toolkit";
 import { sub } from "date-fns";
 import axios from "axios";
 
-// const initialState = [
-//   {
-//     id: "1",
-//     title: "Learning Redux Toolkit",
-//     content: "I've heard good things.",
-//     date: sub(new Date(), { minutes: 10 }).toISOString(),
-//     reactions: {
-//       thumbsUp: 0,
-//       wow: 0,
-//       heart: 0,
-//       rocket: 0,
-//       coffee: 0,
-//     },
-//   },
-//   {
-//     id: "2",
-//     title: "Slices...",
-//     content: "The more I say slice, the more I want pizza.",
-//     date: sub(new Date(), { minutes: 5 }).toISOString(),
-//     reactions: {
-//       thumbsUp: 0,
-//       wow: 0,
-//       heart: 0,
-//       rocket: 0,
-//       coffee: 0,
-//     },
-//   },
-// ];
-
 const POSTS_URL = "https://jsonplaceholder.typicode.com/posts";
 
 const initialState = {
   posts: [],
   status: "idle", //'idle' | 'loading' | 'succeeded' | 'failed'
-  errors: null,
+  error: null,
 };
 
 export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
@@ -126,10 +97,10 @@ const postsSlice = createSlice({
         action.payload.date = new Date().toISOString();
         action.payload.reactions = {
           thumbsUp: 0,
-          hooray: 0,
+          wow: 0,
           heart: 0,
           rocket: 0,
-          eyes: 0,
+          coffee: 0,
         };
         console.log(action.payload);
         state.posts.push(action.payload);

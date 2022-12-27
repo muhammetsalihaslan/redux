@@ -10,7 +10,6 @@ import PostsExcerpt from "./PostsExcerpt";
 
 const PostsList = () => {
   const dispatch = useDispatch();
-
   const posts = useSelector(selectAllPosts);
   const postStatus = useSelector(getPostsStatus);
   const error = useSelector(getPostsError);
